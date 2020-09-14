@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+    <% if(entrada.length){%>
+        <% entrada.forEach(function (entry) { %>
+            <div class="col-md-4 offset-md-4">
+                <div class="card mt-2">
+                    <div class="card-header bg-primary text-white">
+                        <p>
+                            <%= entry.publish %>
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <h1>
+                            <%= entry.title%>
+                        </h1>
+                        <p>
+                            <%= entry.content%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+                <% }else{ %>
+                    <p>No hay tareas
+                        <a href="/new-entry">Agrega una</a></p>
+                    <% } %>
+                        <%- include('partials/footer') %>

@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+    <div class="col-md-4 offset-md-4">
+        <h2 class="text-center">Escribe una nueva tarea</h2>
+        <form method="post" action="/new-entry">
+            <div class="form-group">
+                <label for="title">Titulo de tarea/Recordatorio</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Nueva tarea">
+            </div>
+            <div class="form-group">
+                <label for="body">Descripcion</label>
+                <textarea name="body" id="body" rows="3" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+    <%- include('partials/footer') %>
